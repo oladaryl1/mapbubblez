@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import MapView, { PROVIDER_GOOGLE, Marker, Callout } from 'react-native-maps';
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
 
+
+
+
+
 const INITIAL_REGION = {
   latitude: 41.9534,
   longitude: -87.8010,
@@ -24,22 +28,88 @@ export default function App() {
       >
         {/* First Destination Marker */}
         <Marker
-          coordinate={{ latitude: 41.9534, longitude: -87.8010 }}
+          coordinate={{ latitude: 41.954111, longitude: -87.79675 }}
           title={"Dest 1"}
-          description={"This is the location you specified"}
+          description={"Nesewin sculpture"}
           onPress={() => {
-            setSelectedDestination({ title: "Dest 1", description: "This is the location you specified", imageUri: 'https://picsum.photos/200/300' });
+            setSelectedDestination({ title: "Nesewin sculpture", description: "We can also put audio link tour here ", imageUri: 'https://picsum.photos/id/237/200/300' });
             setPopupVisible(true);
           }}
         />
         
         {/* Second Destination Marker */}
         <Marker
-          coordinate={{ latitude: 41.95333, longitude: -87.80161 }} // Adjust coordinates as needed
+          coordinate={{ latitude: 41.953722, longitude: -87.796805 }} // Adjust coordinates as needed
           title={"Dest 2"}
-          description={"This is another destination"}
+          description={"Indigenous connections"}
           onPress={() => {
-            setSelectedDestination({ title: "Dest 2", description: "This is another destination", imageUri: 'https://picsum.photos/id/237/200/300' });
+            setSelectedDestination({ title: "Dest 2", description: "Indigenous connections", imageUri: 'https://picsum.photos/id/237/200/300' });
+            setPopupVisible(true);
+          }}
+        />
+
+        {/* Third Destination Marker */}
+        <Marker
+          coordinate={{ latitude: 41.952917, longitude: -87.797583 }} // Adjust coordinates as needed
+          title={"Dest 3"}
+          description={"The community saves a treasure"}
+          onPress={() => {
+            setSelectedDestination({ title: "Dest 3", description: "The community saves a treasure", imageUri: 'https://picsum.photos/200/300' });
+            setPopupVisible(true);
+          }}
+        />
+
+        {/* Fourth Destination Marker */}
+        <Marker
+          coordinate={{ latitude: 41.952972, longitude: -87.800167 }} // Adjust coordinates as needed
+          title={"Dest 4"}
+          description={"Time travel to the future "}
+          onPress={() => {
+            setSelectedDestination({ title: "Dest 4", description: "Time travel to the future ", imageUri: 'https://picsum.photos/200/300' });
+            setPopupVisible(true);
+          }}
+        />
+
+        {/* Fifth Destination Marker */}
+        <Marker
+          coordinate={{ latitude: 41.953306, longitude: -87.801472 }} // Adjust coordinates as needed
+          title={"Dest 5"}
+          description={"The life above, below, and around you"}
+          onPress={() => {
+            setSelectedDestination({ title: "Dest 5", description: "The life above, below, and around you", imageUri: 'https://picsum.photos/200/300' });
+            setPopupVisible(true);
+          }}
+        />
+
+        {/* Sixth Destination Marker */}
+        <Marker
+          coordinate={{ latitude: 41.953194, longitude: -87.804278 }} // Adjust coordinates as needed
+          title={"Dest 6"}
+          description={"Time travel to the distant past"}
+          onPress={() => {
+            setSelectedDestination({ title: "Dest 6", description: "Time travel to the distant past", imageUri: 'https://picsum.photos/200/300' });
+            setPopupVisible(true);
+          }}
+        />
+
+        {/* Seventh Destination Marker */}
+        <Marker
+          coordinate={{ latitude: 41.953972, longitude: -87.802056 }} // Adjust coordinates as needed
+          title={"Dest 7"}
+          description={"Bringing back an oak savannah"}
+          onPress={() => {
+            setSelectedDestination({ title: "Dest 7", description: "Bringing back an oak savannah", imageUri: 'https://picsum.photos/200/300' });
+            setPopupVisible(true);
+          }}
+        />
+
+        {/* Eighth Destination Marker */}
+        <Marker
+          coordinate={{ latitude: 41.954111, longitude: -87.801472 }} // Adjust coordinates as needed
+          title={"Dest 8"}
+          description={"Going with the flow"}
+          onPress={() => {
+            setSelectedDestination({ title: "Going with the flow", description: "Going with the flow", imageUri: 'https://picsum.photos/200/300' });
             setPopupVisible(true);
           }}
         />
@@ -87,9 +157,11 @@ const styles = StyleSheet.create({
   },
   popupContent: {
     backgroundColor: 'white',
-    padding: 20,
+    padding: 30, // Adjust the padding to make the popup bigger
     borderRadius: 10,
     elevation: 5,
+    width: 300, // Adjust the width to make the popup wider
+    height: 500 // Adjust the height to make the popup taller
   },
   image: {
     width: 100,
@@ -107,3 +179,4 @@ const styles = StyleSheet.create({
     color: 'black',
   },
 });
+
